@@ -1,40 +1,96 @@
 # Nigerian-football-Club-data-analysis
 
-# ⚽ Sports Analytics Project: Nigerian Club Performance Insights
+# ⚽ Nigeria Premier Football League (NPFL) Data Pipeline Project
 
-## 📌 Overview
-This project explores performance metrics of Nigerian Premier League football clubs using Python-based data analysis. 
+## 📌 Project Overview
 
-The goal was to:
-- Analyze performance trends
-- Compare club-level statistics
-- Identify patterns in match outcomes
-- Extract actionable insights from raw sports data
+Access to structured sports data in African football is limited.
+
+So instead of starting with advanced modeling, I started with the real bottleneck:
+
+**Data acquisition.**
+
+This project focuses on scraping, structuring, and cleaning Nigeria Premier Football League (NPFL) data to build a usable foundation for future sports analytics work.
+
+---
+
+## 🧠 What This Project Does
+
+This repository contains two structured scraping workflows:
+
+### 1️⃣ NPFL Standings Scraper
+- Scrapes real-time league table data from the official NPFL website
+- Handles 403 errors using custom request headers
+- Extracts performance metrics (P, W, D, L, F, A, GD, Pts)
+- Converts numeric columns properly
+- Computes Win Percentage
+- Exports a clean CSV dataset
+
+---
+
+### 2️⃣ NPFL Club Information Scraper
+- Scrapes club information from Wikipedia
+- Extracts team, location, stadium, and capacity data
+- Cleans inconsistent capacity formatting
+- Converts capacity values to proper numeric types
+- Structures data for analysis and export
 
 ---
 
 ## 🛠 Tools & Technologies
+
 - Python
+- Requests
+- BeautifulSoup
 - Pandas
-- Matplotlib / Seaborn
 - Jupyter Notebook
 
 ---
 
-## 📊 Key Insights
-- Identified performance disparities between top and mid-tier clubs
-- Detected scoring trends across seasons
-- Visualized competitive patterns using data-driven storytelling
+## 🎯 Why This Matters
+
+Sports analytics doesn’t start with machine learning.
+
+It starts with:
+
+- Reliable data
+- Clean structure
+- Reproducible pipelines
+
+For leagues like the NPFL, structured datasets are not readily accessible.
+
+This project builds that foundation.
 
 ---
 
-## 📂 Files
-- `Sports_Analytics_Project.ipynb`
-- `Sport_Analytics_Nigerian_club_info.ipynb`
+## 🚀 Next Steps
+
+With the dataset now structured, future work can include:
+
+- Performance trend analysis
+- Home vs away efficiency comparison
+- Stadium capacity vs performance correlation
+- Predictive modeling
+- Longitudinal league analysis
+
+This repository represents Step 1: building access before building intelligence.
 
 ---
 
-## 🚀 Why This Project Matters
-Sports analytics is transforming football strategy, recruitment, and performance optimization. 
+## 📂 Repository Structure
 
-This project demonstrates how structured data analysis can uncover insights that go beyond surface-level statistics.
+- `Sports_Analytics_Project.ipynb` — League standings scraper & performance metric preparation  
+- `Sport_Analytics_Nigerian_club_info.ipynb` — Club metadata scraper & cleaning workflow  
+
+---
+
+## 📈 Personal Note
+
+This project reflects my approach to data:
+
+Understand the source.  
+Build the pipeline.  
+Structure the dataset.  
+Then extract insight.
+
+African sports analytics has massive untapped potential — and this is the starting point.
